@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import RelatedList from './relatedComparison/RelatedList.jsx';
 import RateReview from './ratings-reviews/index.jsx';
+import QuestionsList from './questionsAndAnswers/QuestionsList.jsx';
 
 class App extends React.Component {
   render () {
@@ -11,6 +12,10 @@ class App extends React.Component {
       <div id ='relatedAndComparison'>
           <RelatedList />
           <h4>Placeholder for outfit section</h4>
+      </div>
+      <div>Questions and Answers placeholder</div>
+      <div id='questionsAndAnswers'>
+        <QuestionsList />
       </div>
 
 
