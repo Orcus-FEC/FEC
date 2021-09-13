@@ -29,8 +29,8 @@ class IndividualQuestions extends React.Component {
 
     return (
       <div>
-        <p>Questions</p>
-        <ReviewList eachQuestion={this.state.eachQuestion}/>
+
+
       </div>
     )
   }
