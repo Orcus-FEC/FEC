@@ -1,13 +1,12 @@
 import React from 'react';
+import axios from 'axios';
 
-import { listQuestionsData, answersListData } from './dummyData.js';
-import IndividualQuestions from './individualQuestions.jsx';
+import {listQuestionsData, answersListData} from './dummyData.js';
 
+import Questions from './Questions.jsx';
 
 
 // CSS STYLINGS GO HERE
-
-
 
 // At the center of the Questions and Answers module will be a list of questions that have been asked about the given product.
 
@@ -26,11 +25,10 @@ class QuestionsList extends React.Component {
     super(props);
 
     this.state = {
-      questionsData: [],
-      maxQuestionsDisplayed: 4,
-      filtered: false,
-      inputSearch: '',
-      expandList: false
+      body: '',
+      name: '',
+      email: '',
+      product_id: ''
     };
 
       //bind
@@ -39,20 +37,33 @@ class QuestionsList extends React.Component {
 
   componentDidMount() {
 
-
   }
 
+  postQuestion() {
 
+    axios.post('/qa/questions', {
+      body: newQuestion,
+      name: username,
+      email: emailAddress,
+      product_id: productID
+    })
+      .then((response) => {
+        console.log('Post Q Success: ', response);
 
-
+      })
+      .catch((error) => {
+        console.log('Cannot post Questions: ', error)
+      });
+  }
 
 
   render() {
 
     return (
+
       <div>
-        <p>Questions</p>
-        <IndividualQuestions questionsData={this.state.questionsData}/>
+
+
       </div>
     )
   }

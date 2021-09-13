@@ -1,27 +1,28 @@
 import React from 'react';
+import axios from 'axios';
 
 
 // CSS STYLINGS GO HERE
 
 
 
-class IndividualQuestions extends React.Component {
+class Answers extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      eachQuestion: []
+
+      clicked: false,
+
     }
 
 
   }
 
 
-  componentDidMount() {
-
+  handleClick(event) {
 
   }
-
 
 
 
@@ -37,4 +38,4 @@ class IndividualQuestions extends React.Component {
 }
 
 
-export default IndividualQuestions;
+export default Answers;

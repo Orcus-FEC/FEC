@@ -10,7 +10,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(morgan('dev'));
 
-
 app.listen(port, function() {
   console.log(`listening on port ${port}`);
 });
